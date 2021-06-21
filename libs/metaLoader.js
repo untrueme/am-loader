@@ -36,8 +36,8 @@ async function loadModules() {
     const modulesNames = modules.map(x => x.name);
     function sortModules() {
         let isSpliced = false;
-        const copyNfModules = [...modules];
-        for (const mod of copyNfModules) {
+        const copyAmModules = [...modules];
+        for (const mod of copyAmModules) {
             const befores = modules.filter(x => x.meta && x.meta.require
                 && (x.meta.require.before === mod.name || (Array.isArray(x.meta.require.before) && x.meta.require.before.includes(mod.name))));
             if (befores.length > 0) {
